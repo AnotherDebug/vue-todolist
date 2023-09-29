@@ -37,7 +37,7 @@
 
                 <li v-for = "(task, index) in tasks" class="d-flex">
                     <span @click = "task.done = !task.done" :class="{'done' : task.done}">{{task.text}}</span>
-                    <i @click="eliminateTask" class="fa-solid fa-trash"></i>
+                    <i @click="eliminateTask(index)" class="fa-solid fa-trash"></i>
                 </li>
                
             </ul>

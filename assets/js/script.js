@@ -76,20 +76,23 @@ createApp({
         text: "",
         done: false,
       },
+      isError: false
     };
   },
   methods: {
 
 addNewTask() {
-    this.tasks.push(this.newTask);
+    this.tasks.unshift(this.newTask);
 },
 
-eliminateTask() {
-    this.tasks.splice(this.index, 1);
+eliminateTask(index) {
+    this.tasks.splice(index, 1);
 }
     
   },
   mounted() {
     console.log("Prova");
+    console.log(this.newTask);
+    console.log(this.tasks);
   },
 }).mount("#data");
