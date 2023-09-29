@@ -76,7 +76,9 @@ createApp({
   },
   methods: {
 
-
+addNewTask() {
+    this.tasks.push(this.newTask)
+}
     
   },
   mounted() {
