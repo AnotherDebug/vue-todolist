@@ -11,13 +11,6 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-
     <!-- Using Vue from CDN -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
@@ -27,6 +20,40 @@
 
 <body>
 
+    <div class="container">
+
+        <div class="logo d-flex">
+            <img src="assets/img/logo.png" alt="">
+            <h1>boolean</h1>
+        </div>
+
+        <div class="tasks d-flex">
+<input type="text" placeholder="New Task">
+<button class="btn">Aggiungi</button>
+        </div>
+
+        <div class="task">
+            <ul>
+                <li class="d-flex ">
+                    <span>fare la spesa</span>
+                    <i class="fa-solid fa-trash"></i>
+                </li>
+                <li class="d-flex ">
+                    <span>comprare il libro del signore degli anelli</span>
+                    <i class="fa-solid fa-trash"></i>
+                </li>
+                <li class="d-flex ">
+                    <span>mettere a posto i rubinetti di casa</span>
+                    <i class="fa-solid fa-trash"></i>
+                </li>
+                <li class="d-flex ">
+                    <span>comprare dei fiori a mia moglie</span>
+                    <i class="fa-solid fa-trash"></i>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 
     <script src="assets/js/script.js"></script>
 </body>
