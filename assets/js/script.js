@@ -39,7 +39,11 @@ Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il
 2. stampare ogni item su html;
 3. itero gli oggetti dell'array direttamente nell'HTML;
 4. attraverso un oggetto, collego il v-model al input text per raccogliere il nuovo task e pusharlo nei tasks;
-4. creo la classe nel css per barrare i todo completati e lo saranno soltanto quando 'done' diventerà true;
+5. per inserire i nuovi task, non solo al click, aggiungo un evento al keyup di enter; 
+6. creo la classe nel css per barrare i todo completati e lo saranno soltanto quando 'done' diventerà true;
+7. creo un toggle al click sul text per stabilire il valore booleano al click e lo collego al binding della classe done;
+8. all'evento click del cestino elimino il task corrispondente;
+9. creo una funzione che elimina il task durante l'evento click
 
 */
 
@@ -77,7 +81,11 @@ createApp({
   methods: {
 
 addNewTask() {
-    this.tasks.push(this.newTask)
+    this.tasks.push(this.newTask);
+},
+
+eliminateTask() {
+    this.tasks.splice(this.index, 1);
 }
     
   },
