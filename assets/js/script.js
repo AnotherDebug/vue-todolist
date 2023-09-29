@@ -39,3 +39,36 @@ Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il
 2. stampare ogni item su html;
 
 */
+
+const {createApp} = Vue;
+
+createApp({
+    data(){
+        return{
+
+            //1.
+            tasks:[
+                {
+                    text: 'fare la spesa',
+                    done: false
+                },
+                {
+                    text: 'comprare il libro del signore degli anelli',
+                    done: false
+                },
+                {
+                    text: 'mettere a posto i rubinetti di casa',
+                    done: false
+                },
+                {
+                    text: 'comprare dei fiori a mia moglie',
+                    done: false
+                }
+            ]
+
+        }
+    },
+    mounted(){
+        console.log('Prova');
+    }
+}).mount('#data');
