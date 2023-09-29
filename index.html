@@ -29,17 +29,19 @@
 
         <div class="tasks d-flex">
             <input @keyup.enter="addNewTask" v-model="newTask.text" type="text" placeholder="New Task">
-            <button @click="addNewTask()" class="btn">Aggiungi</button>
+            <button @click="addNewTask" class="btn">Aggiungi</button>
         </div>
+
+        <p class="error" v-if="isError">Devi inserire almeno 5 caratteri</p>
 
         <div class="task">
             <ul>
 
-                <li v-for = "(task, index) in tasks" class="d-flex">
-                    <span @click = "task.done = !task.done" :class="{'done' : task.done}">{{task.text}}</span>
+                <li v-for="(task, index) in tasks" class="d-flex">
+                    <span @click="task.done = !task.done" :class="{'done' : task.done}">{{task.text}}</span>
                     <i @click="eliminateTask(index)" class="fa-solid fa-trash"></i>
                 </li>
-               
+
             </ul>
         </div>
 
