@@ -82,7 +82,15 @@ createApp({
   methods: {
 
 addNewTask() {
-    this.tasks.unshift(this.newTask);
+    
+    if(this.newTask.text.length < 5){
+      this.isError = true;
+      console.log('errore');
+    }else{
+      this.tasks.unshift(this.newTask);
+      this.newTask = "";
+      this.isError = false;
+    }
 },
 
 eliminateTask(index) {
