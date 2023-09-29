@@ -1,0 +1,81 @@
+/*************************************************
+    GENERAL STYLES
+ *************************************************/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/************************************************
+    UTILITIES
+ ************************************************/
+
+
+.container {
+    width: 60%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* !"DEBUG" DA ELIMINARE TERMINATO IL CODICE*/
+.debug {
+    background-color: rgba(0, 102, 255, 0.5);
+    border: 1px solid #000;
+}
+
+
+/************************************************
+    SITE SECTIONS
+ ************************************************/
+
+
+ .logo {
+    justify-content: center;
+    align-items: center;
+ }
+
+ .logo h1 {
+    padding-left: 10px;
+ }
+
+ .tasks {
+    justify-content: center;
+    margin-top: 25px;
+ }
+
+ .tasks input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border-color: antiquewhite;
+ }
+
+ .tasks .btn {
+    margin-left: 15px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border-color: antiquewhite;
+ }
+
+ .task {
+    margin-top: 30px;
+    background-color: #f5f7f7;
+    padding: 30px 40px;
+ }
+
+ .task ul li {
+    list-style: none;
+    border-bottom: 1px solid lightgray;
+    padding: 15px;
+    justify-content: space-between;
+ }
+
+ .task ul li i {
+    color: gray;
+ }
