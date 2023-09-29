@@ -79,3 +79,7 @@
  .task ul li i {
     color: gray;
  }
+
+ .done {
+   text-decoration: line-through;
+ }
