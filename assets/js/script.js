@@ -43,47 +43,43 @@ Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il
 
 */
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
-    data(){
-        return{
+  data() {
+    return {
+      //1.
+      tasks: [
+        {
+          text: "fare la spesa",
+          done: false,
+        },
+        {
+          text: "comprare il libro del signore degli anelli",
+          done: false,
+        },
+        {
+          text: "mettere a posto i rubinetti di casa",
+          done: false,
+        },
+        {
+          text: "comprare dei fiori a mia moglie",
+          done: false,
+        },
+      ],
 
-            //1.
-            tasks:[
-                {
-                    text: 'fare la spesa',
-                    done: false
-                },
-                {
-                    text: 'comprare il libro del signore degli anelli',
-                    done: false
-                },
-                {
-                    text: 'mettere a posto i rubinetti di casa',
-                    done: false
-                },
-                {
-                    text: 'comprare dei fiori a mia moglie',
-                    done: false
-                }
-            ],
+      newTask: {
+        text: "",
+        done: false,
+      },
+    };
+  },
+  methods: {
 
-            newTask:{
-                text:"",
-                done:false
-            },
-            
 
-        }
-    },
-    methods:{
-        newTaks(index){
-            console.log(index);
-        }
-    },
-    mounted(){
-        console.log('Prova');
-        
-    }
-}).mount('#data');
+    
+  },
+  mounted() {
+    console.log("Prova");
+  },
+}).mount("#data");
