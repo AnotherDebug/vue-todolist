@@ -28,7 +28,7 @@
         </div>
 
         <div class="tasks d-flex">
-            <input v-model="newTask.text" type="text" placeholder="New Task">
+            <input @keyup.enter="addNewTask" v-model="newTask.text" type="text" placeholder="New Task">
             <button @click="addNewTask()" class="btn">Aggiungi</button>
         </div>
 
@@ -37,7 +37,7 @@
 
                 <li v-for = "(task, index) in tasks" class="d-flex">
                     <span @click = "task.done = !task.done" :class="{'done' : task.done}">{{task.text}}</span>
-                    <i class="fa-solid fa-trash"></i>
+                    <i @click="eliminateTask" class="fa-solid fa-trash"></i>
                 </li>
                
             </ul>
