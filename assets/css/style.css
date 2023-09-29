@@ -63,6 +63,15 @@
     border-color: antiquewhite;
  }
 
+p {
+ text-align: center;
+ margin-top: 10px;
+ }
+
+ .error {
+   color: red;
+ }
+
  .task {
     margin-top: 30px;
     background-color: #f5f7f7;
