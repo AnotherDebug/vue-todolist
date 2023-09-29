@@ -34,22 +34,12 @@
 
         <div class="task">
             <ul>
-                <li class="d-flex ">
-                    <span>fare la spesa</span>
+
+                <li v-for = "(task, index) in tasks" class="d-flex">
+                    <span @click = "newTask(index)">{{task.text}}</span>
                     <i class="fa-solid fa-trash"></i>
                 </li>
-                <li class="d-flex ">
-                    <span>comprare il libro del signore degli anelli</span>
-                    <i class="fa-solid fa-trash"></i>
-                </li>
-                <li class="d-flex ">
-                    <span>mettere a posto i rubinetti di casa</span>
-                    <i class="fa-solid fa-trash"></i>
-                </li>
-                <li class="d-flex ">
-                    <span>comprare dei fiori a mia moglie</span>
-                    <i class="fa-solid fa-trash"></i>
-                </li>
+               
             </ul>
         </div>
 
