@@ -71,7 +71,6 @@ createApp({
           done: false,
         },
       ],
-
       newTask: {
         text: "",
         done: false,
@@ -81,21 +80,25 @@ createApp({
   },
   methods: {
 
-addNewTask() {
+    addNewTask() {
     
-    if(this.newTask.text.length < 5){
-      this.isError = true;
-      console.log('errore');
-    }else{
-      this.tasks.unshift(this.newTask);
-      this.newTask = "";
-      this.isError = false;
-    }
-},
+      if (this.newTask.text.length < 5) {
+        this.isError = true;
+        console.log('errore');
+      } else {
+        this.tasks.unshift(this.newTask);
+        this.newTask = {
+          text: "",
+          done: false,
+        };
+        console.log(this.newTask);
+        this.isError = false;
+      }
+    },
 
-eliminateTask(index) {
-    this.tasks.splice(index, 1);
-}
+    eliminateTask(index) {
+      this.tasks.splice(index, 1);
+    }
     
   },
   mounted() {
